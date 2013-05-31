@@ -1,0 +1,643 @@
+
+
+
+ 
+ 
+ 
+
+
+
+ 
+ 
+ <!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="https://ssl.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <link rel="canonical" href="http://code.google.com/p/smartladder/wiki/AndroidGAE" />
+ 
+ <script type="text/javascript">
+ 
+ (function(){(function(){function b(a){this.t={};this.tick=function(a,b,c){b=void 0!=c?c:(new Date).getTime();this.t[a]=b};this.tick("start",null,a)}var a=new b;window.jstiming={Timer:b,load:a};try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT)),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT),a&&(window.jstiming.pt=a)}catch(d){}})();})();
+
+ 
+ 
+ 
+ 
+ var codesite_token = null;
+ 
+ 
+ var CS_env = {"projectName":"smartladder","loggedInUserEmail":null,"token":null,"profileUrl":null,"relativeBaseUrl":"","assetVersionPath":"https://ssl.gstatic.com/codesite/ph/13105533463844027904","domainName":null,"assetHostPath":"https://ssl.gstatic.com/codesite/ph","projectHomeUrl":"/p/smartladder"};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-34827827-1'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ 
+ </script>
+ 
+ 
+ <title>AndroidGAE - 
+ smartladder -
+ 
+ 
+ 我是一个聪明的梯子，用来干什么你懂的。_(:з」∠)_ - Google Project Hosting
+ </title>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/13105533463844027904/css/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/13105533463844027904/css/ph_detail.css" >
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" href="/feeds/p/smartladder/svnchanges/basic?path=/wiki/AndroidGAE.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/13105533463844027904/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ #maincol {
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+
+ 
+ </style>
+</head>
+<body class="t6">
+<script type="text/javascript">
+ window.___gcfg = {lang: 'en'};
+ (function() 
+ {var po = document.createElement("script");
+ po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+ var s = document.getElementsByTagName("script")[0];
+ s.parentNode.insertBefore(po, s);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ <a href="#" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>&#9660;</small></a>
+ | <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Fsmartladder%2Fwiki%2FAndroidGAE&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Fsmartladder%2Fwiki%2FAndroidGAE" onclick="_CS_click('/gb/ph/signin');"><u>Sign in</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0"
+ itemscope itemtype="http://schema.org/CreativeWork">
+ <tr style="height: 58px;">
+ 
+ 
+ 
+ <td id="plogo">
+ <link itemprop="url" href="/p/smartladder">
+ <a href="/p/smartladder/">
+ 
+ 
+ <img src="/p/smartladder/logo?cct=1367930781"
+ alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="/p/smartladder/"><span itemprop="name">smartladder</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link"
+ href="/p/smartladder/"><span itemprop="description">我是一个聪明的梯子，用来干什么你懂的。_(:з」∠)_</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ 
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="/p/smartladder/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ <a href="/p/smartladder/downloads/list" class="tab ">Downloads</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/smartladder/w/list" class="tab active">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/smartladder/issues/list"
+ class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/smartladder/source/checkout"
+ class="tab ">Source</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class=gtbc></div>
+</div>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ <td class="subt">
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="/p/smartladder/w/list" method="GET" style="display:inline">
+ <select id="can" name="can" >
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1" >&nbsp;All wiki pages</option>
+ <option value="3" >&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="4" >&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input type="text" size="38" id="searchq" name="q" value=""
+ autocomplete="off" ></span>
+ 
+ 
+ 
+ <input type="submit" value="Search" >
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol"
+ 
+>
+
+ 
+
+
+
+
+
+
+
+ <style type="text/css">
+ .delcom { background: #e8e8e8 }
+ .commentcontent {
+ margin: 2em;
+ padding: 0px 10px;
+ width: 66em;
+ }
+ .artifactcomment {
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentform {
+ border-top: 3px solid #c3d9ff;
+ }
+ </style>
+
+<div id="wikipage">
+<table>
+ <tr>
+ 
+ 
+ <td style="vertical-align:top; padding-left:5px">
+ 
+ <div id="wikiheader">
+ 
+ <span style="font-size:120%;font-weight:bold">AndroidGAE</span>
+ &nbsp;
+ <div> 
+ 
+ 
+ <br/>
+ 
+ <a class="label" style="padding-top: 2px"
+ href="/p/smartladder/w/list?q=label:安卓GAE使用方法"
+ title=""
+ >安卓GAE使用方法</a>
+ 
+ 
+ 
+ <div id="wikiauthor" style="float:right">
+ Updated <span title="Wed Dec  5 03:50:41 2012">
+ Dec 5, 2012</span>
+ 
+ by 
+
+ <a class="userlink"
+ href="/u/KawaiiUshio/">KawaiiUshio</a
+>
+ 
+ </div>
+ </div>
+ </div>
+ 
+ <div id="wikicontent">
+ <div class="vt" id="wikimaincol">
+ <p>Goagent For Android     ( 未ROOT也可使用 只限于浏览网页) </p><p>1：手机上安装GAE Proxy </p><p>2:运行GAE Proxy </p><p>3:配置Go Agent代理  </p><p>按照本图设置 密钥可以不输入 </p><p><img src="https://lh3.googleusercontent.com/-HnsEsxJV64E/UGqYG-0m21I/AAAAAAAAAL8/pgOhk3pa6vI/s595/6d9bd6a5jw1dxgw6ggosxj.jpg" /> </p><p><img src="https://lh4.googleusercontent.com/-3IKR1jy57n4/UGqYGzB_9rI/AAAAAAAAAL8/ghM8_UDjiQk/s595/6d9bd6a5jw1dxgw183hdnj.jpg" /> </p><p>4 导入 GAEProxy CA(证书) <a href="http://code.google.com/p/smartladder/downloads/detail?name=cacerts.bks&amp;can=2&amp;q=#makechanges" rel="nofollow">安卓2.X证书下载</a>  </p><p><a href="http://code.google.com/p/smartladder/downloads/detail?name=CA.crt&amp;can=2&amp;q=#makechanges" rel="nofollow">安卓4.0+证书下载</a>  到 Android 系统 </p><p>通用步骤 </p><p>请确认手机已 ROOT，对于 HTC 的机型，还需确认处于 s-off 状态 </p><p>1. 备份 /system/etc/security/cacerts.bks 文件 </p><p>2. 下载 已修改好的根证书 并放于当前目录下，之后在命令行中执行： </p><p>使用 Root Explorer（或者es文件浏览器） 从 SD 卡复制到 /system/etc/security/ 目录。覆盖原文件 </p><p>3. 重启手机后生效 </p><p>4.0 及以上系统  </p><p>1. 下载 原始根证书 置于 SD 卡根目录 </p><p>2. 进入设置-&gt;安全-&gt;从SD卡安装证书 </p><p>5  爪机一阵狂抖 您的梯子就搭成功了 </p><p>ENJOY  </p><p>（GAE Proxy是自带浏览器的，每次上外网先运行GAE Proxy选链接，浏览器就可选了，打开浏览器就直接上外网） </p>
+ </div>
+ </div>
+ </td><tr>
+</table>
+ </div>
+
+
+ 
+ <div id="wikicommentcol">
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<div class="collapse">
+
+
+ 
+
+
+<div id="commentlist">
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ <a class="userlink"
+ href="/u/108867015690067344355/">songti...@gmail.com</a
+>,
+ 
+ </span>
+ <span class="date" title="Mon Feb 18 21:50:35 2013">Feb 18, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>我下载之后，为什么代理类型里只有GAE和PASS，没有GOAGENT? </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">LZk...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Mon Mar  4 17:55:07 2013">Mar 4, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>代理地址是填chrome。。。么，还有自带浏览器在哪里，选链接也没选项可选，总之没代理成功 </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">leceasch...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Wed Apr  3 06:08:22 2013">Apr 3, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>第一，代理类型只有GAE和PASS，没有GOAGENT； 第二，老是显示GAE代理连接已关闭。求指教<span style="text-decoration: line-through">~ </span></p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">cr3...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Sat Apr  6 02:30:17 2013">Apr 6, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>不好用，还有广告 </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ 
+ <span class="userlink">liwenhui...@gmail.com</span>,
+ 
+ </span>
+ <span class="date" title="Fri Apr 12 02:33:08 2013">Apr 12, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>弄完后只能上google，别的上不了啊！！！！ </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment"
+ 
+ >
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by 
+ 
+ 
+
+ <a class="userlink"
+ href="/u/110018066899283739604/">rocf...@gmail.com</a
+>,
+ 
+ </span>
+ <span class="date" title="Tue May 14 19:11:18 2013">May 14, 2013</span>
+ <div>
+<div class="commentcontent">
+<p>503没流量啊...每天多少G？ </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+</div>
+</div>
+
+ 
+
+
+ <script type="text/javascript">
+ function delComment(sequence_num, create_time, delete_mode) {
+ var f = document.forms["delcom"];
+ f.sequence_num.value = sequence_num;
+ f.create_time.value = create_time;
+ f.mode.value = delete_mode;
+ f.submit();
+ return false;
+ }
+ </script>
+
+
+ </div>
+ 
+ 
+ 
+ 
+ <br>
+ <div class="artifactcomment">
+ <span class="indicator">&#9658;</span> <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Fsmartladder%2Fwiki%2FAndroidGAE&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Fsmartladder%2Fwiki%2FAndroidGAE"
+ >Sign in</a> to add a comment
+ </div>
+ 
+ 
+ 
+ 
+ <form name="delcom" action="../w/delComment.do" method="POST">
+ <input type="hidden" name="sequence_num" value="" >
+ <input type="hidden" name="create_time" value="" >
+ <input type="hidden" name="mode" value="" >
+ <input type="hidden" name="pagename" value="AndroidGAE" >
+ <input type="hidden" name="token" value="" >
+ </form>
+
+
+ <script src="https://ssl.gstatic.com/codesite/ph/13105533463844027904/js/prettify/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/13105533463844027904/js/dit_scripts.js"></script>
+
+
+
+  
+ 
+ 
+ <script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/13105533463844027904/js/ph_core.js"></script>
+ 
+ <script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/13105533463844027904/js/ph_dwiki.js"></script>
+ 
+ 
+ 
+ 
+</div> 
+
+<div id="footer" dir="ltr">
+ <div class="text">
+ <a href="/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+
+ 
+ 
+
+
+ 
+ 
+ <script type="text/javascript">_CS_reportToCsi();</script>
+ 
+ </body>
+</html>
+
+
