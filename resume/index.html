@@ -1,97 +1,56 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>周子健的个人简历</title>
-<link href="assets/main.css" rel="stylesheet">
-<!--[if lt IE 9]>
-  <script src="assets/html5shiv.js"></script>
-<![endif]-->
-<!-- html5shiv does not work on body-omitted pages -->
-<body>
-<header class="container">
-  <hgroup>
-    <h1>周子健的个人简历</h1>
-    <h2>应聘岗位：结构工程师</h2>
-  </hgroup>
-</header>
-<article id="main" class="container">
-  <section>
-    <h2>个人信息</h2>
-    <ul class="item-kv">
-      <li>
-        <label>姓名</label>
-        <span>周子健</span>
-      </li>
-      <li>
-        <label>性别</label>
-        <span>男</span>
-      </li>
-      <li>
-        <label>出生</label>
-        <span>1992 年 9 月</span>
-      </li>
-      <li>
-        <label>学历</label>
-        <span>本科 湖南大学 2014 年春夏交毕业</span>
-      </li>
-      <li>
-        <label>邮箱</label>
-        <span><address>183465355@qq.com</address></span>
-      </li>
-      <li>
-        <label>QQ</label>
-        <span>183465355</span>
-      </li>
-      <li>
-        <label>blog</label>
-        <span><a href="http://zeblog.duapp.com/">zeblog</a><code class="link-print" aria-hidden="true"> (http://zeblog.duapp.com/) </code></span>
-      </li>
-      <li>
-        <label>github</label>
-        <span><a href="https://github.com/jiange1236">@jiange1236</a><code class="link-print" aria-hidden="true"> (https://github.com/jiange1236) </code></span>
-      </li>
-    </ul>
-  </section>
-  <section>
-    <h2>职业技能</h2>
-    <ul>
-      <li>CAD辅助设计</li>
-      <li>天正建筑、天正结构、理正辅助设计计算</li>
-      <li>C语言简单编程</li>
-      <li>Office、Photoshop、会声会影程序使用</li>
-      <li>计算机使用及维修、web应用初级开发</li>
-      <li>以上技能是筛过的，可能有遗漏，不包括渣到一定程度的技能</li>
-    </ul>
-  </section>
-  <section>
-    <h2>项目经验</h2>
-    <ul>
-      <li>暂无</li>
-    </ul>
-  </section>
-  <section>
-    <h2>其他经验</h2>
-    <ul>
-      <li>课程设计主要绘图人员</li>
-      <li>多次帮助处理计算机故障</li>
-    </ul>
-  </section>
-  <section>
-    <h2>关于我</h2>
-    <ul>
-      <li>喜欢钢结构，对CAD等软件的操作有一定的熟练度</li>
-      <li>略微的完美主义情结，做事风格严谨</li>
-    </ul>
-  </section>
-</article>
-<footer class="container hidden-print">
-  本简历由 <a href="http://gruntjs.com">Grunt</a> + <a href="https://twitter.github.io/hogan.js/">Hogan.js</a> 生成
-  |
-  托管在 <a href="https://github.io">GitHub Pages</a>
-  |
-  脚本：<a href="https://github.com/jiange1236/Zeblog">VIEW SOURCE ON GITHUB</a>
-</footer>
-<div id="operation" class="hidden-print" role="menubar">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>周子健的个人简历</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="nojs">
+    <div>
+        <section id="information">
+            <h2>基本信息</h2>
+            <img src="photo.jpg" alt="周子健" />
+            <p><span>姓名：</span>周子健</p>
+            <p><span>性别：</span>男</p>
+            <p><span>出生年月：</span>1992年9月</p>
+            <p><span>移动电话：</span>15116155426</p>
+            <p><span>电子邮件：</span><a class="print" href="mailto:183465355@qq.com">183465355@qq.com</a></p>
+            <p><span>个人网站：</span><a class="print" href="zeblog.duapp.com">Zeblog</a></p>
+        </section>
+        <section id="evaluation">
+            <h2>自我评价</h2>
+            <p>性格沉稳冷静，对计算机操作熟练</p>
+        </section>
+        <section id="experiences">
+            <h2>相关工作经验</h2>
+            <h3><time>2013.05:</time>暂无</h3>
+        </section>
+        <section id="education">
+            <h2>教育背景及其他</h2>
+            <p><time>本科 2010-2014:</time>湖南大学</p>
+            <p><time>研究生 2014-:</time>湖南大学</p>
+            <p>通过大学英语四六级考试，PET3口语考试</p>
+        </section>
+        <section id="languages">
+            <h2>职业技能</h2>
+            <p>CAD辅助设计</p>
+            <p>天正建筑、天正结构、理正辅助设计计算</p>
+            <p>Office、Photoshop、会声会影程序使用，C语言简单编程</p>
+            <p>计算机使用及维修、web应用初级开发</p>
+        </section>
+        <section id="about">
+            <h2>关于该简历</h2>
+            <p class="screen">该简历页面使用前端技术制作，代码易读，语义清晰，兼容主流的现代浏览器，对旧浏览器提供有限的降级支持。页面采用响应式设计，在桌面和移动设备上均有良好表现。本着绿色环保低碳的原则，页面对打印样式也做了相应优化，您可通过浏览器的打印预览功能查看效果，并放心的将其打印为纸质文档。</p>
+            <p class="print">该文档打印自在线版简历，您可通过地址 https://github.com/jiange1236/Zeblog 访问。</p>
+            <p class="print">在线版简历页面使用前端技术制作，代码易读，语义清晰，兼容主流的现代浏览器，对旧浏览器提供有限的降级支持。页面采用响应式设计，在桌面和移动设备上均有良好表现。本着绿色环保低碳的原则，页面对打印样式做了相应优化，访问在线版地址，您可获得不同于纸质文档的舒适的阅读体验。</p>
+        </section>
+    </div>
+    <footer>
+        <p>@Copyright 2013 <a href="http://zeblog.duapp.com"title="zeblog">zeblog</a></p>
+    </footer>
+    <script src="script.js"></script>
+	<div id="operation" class="hidden-print" role="menubar">
   <a href="javascript:void(0);" id="print-link" role="menu" aria-label="使用打印机打印我的简历">打印</a>
   <a href="https://github.com/jiange1236/Zeblog" role="menu" aria-label="在 GitHub 中查看这份简历的源文件">VIEW ON GITHUB</a>
 </div>
@@ -103,3 +62,4 @@
   }(window, window.document)
 </script>
 </body>
+</html>
