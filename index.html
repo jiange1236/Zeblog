@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Zeblog - A personal blog.</title>
+    	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="description" content="周子健,编程，技术，分享 - http://zeblog.duapp.com "/>
+		<meta name="keyword" content="排序,正则表达式,技术宅,算法,软件开发,AJAX,Algorithm,Android,Bash,book,C++,Code Review,Coding,CSS,Database,Debug,ebook,Erlang,Game,Go,Google,HTML,IE,Java,Javascript,jQuery,Linus Torvalds,Linux,Mac,MySQL,Oracle,OS,Perl,PHP,Programmer,programming,language,Python,Ruby,SQL,Ubuntu,UI,Unix,vim,Web,Windows"/>
+	   <link rel="icon" href="favicon.ico" type="image/x-icon">
+	   <link rel="stylesheet" type="text/css" href="www/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="www/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="www/css/prettify.css">
+        <link rel="stylesheet" type="text/css" href="www/css/metro.css">
+        <link rel="stylesheet" type="text/css" href="www/css/site.css">
+    
+  <script type="text/javascript" src="www/js/jquery-1.7.2.min.js"></script>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+        body {
+            background: transparent url(www/img/bgmetro1.png);
+            overflow-y:hidden;
+            overflow:hidden;
+        }
+		.metro {
+            width: 940px;
+            overflow: hidden;
+        }
+
+		.metro-section {
+            width: 810px !important;
+        }
+		#demo {
+
+			position: relative;
+
+		}	
+		 #left {
+		
+			width:1080px;
+            height:782px;
+
+        }
+
+		#right {
+		
+			float:left;
+		margin-top:200px;
+		margin-bottom:30px;
+			width:810px;
+            height:472px;
+		}
+		<!-- 解决IE兼容性 -->
+		.metro .metro-sections .metro-section .tile.tile-double-vertical .tile-icon-large {margin-left:0px;}
+	</style>
+</head>
+<body>
+<!--千万别看偶写的代码哈！-->
+<style>
+body{margin:0;padding:10}
+#loader{width:100%;height:100%;position:fixed;z-index:9990}
+#loader_left,#loader_right{width:50%;height:100%;background:rgba(0,0,0,.75);position:absolute;top:0;}
+#loader_left{left:0}
+#loader_right{right:0}
+#loader_content,#loader_content2{font-size:36px;width:250px;height:50px;color:#fff;text-shadow:0 0 10px #aaa;z-index:9991;position:absolute;left:calc(50% - 125px);text-align:center;opacity:1;pointer-events:none}
+#loader_content{top:calc(50% - 55px);}
+#loader_content2{top:calc(50% + 5px);}
+#loader_shining{width:250px;height:4px;background:-webkit-radial-gradient(contain,#FFF,rgba(255,255,255,0));background:-moz-radial-gradient(contain,#FFF,rgba(255,255,255,0));background:radial-gradient(contain,#FFF,rgba(255,255,255,0));z-index:9991;position:absolute;top:calc(50% - 2px);left:calc(50% - 125px)}
+#loader_shining_inner{width:24px;height:24px;z-index:9992;position:relative;top:-10px;left:0px;-webkit-animation:l_loader_shining_inner linear 2s infinite;animation:l_loader_shining_inner linear 2s infinite;background:-webkit-radial-gradient(circle,#FFF 5px,rgba(255,255,255,0) 10px);background:-moz-radial-gradient(circle,#FFF 5px,rgba(255,255,255,0) 10px);background:radial-gradient(circle,#FFF 5px,rgba(255,255,255,0) 10px)}
+@-webkit-keyframes l_loader{
+    from{top:0;height:100%;}
+    50%{top:calc(50% - 1px);height: 2px;}
+    to{top:calc(50% - 1px);height: 2px;}
+}
+@-webkit-keyframes l_loader_float{
+    from{width:50%;opacity:1;}
+    50%{width:50%;opacity:1;}
+    to{width:0%;opacity:0.5;}
+}
+@-webkit-keyframes l_loader_content{
+    from{opacity:1;}to{opacity:0;}
+}
+ 
+@-webkit-keyframes l_loader_shining_inner{
+    from{left:0;opacity:0;-webkit-transform:scale(0);}
+    50%{opacity:1;-webkit-transform:scale(1);}
+    to{left:100%;opacity:0;-webkit-transform:scale(0);}
+}
+@keyframes l_loader{
+    from{top:0;height:100%;}
+    50%{top:calc(50% - 1px);height: 2px;}
+    to{top:calc(50% - 1px);height: 2px;}
+}
+@keyframes l_loader_float{
+    from{width:50%;opacity:1;}
+    50%{width:50%;opacity:1;}
+    to{width:0%;opacity:0.5;}
+}
+@keyframes l_loader_content{
+    from{opacity:1;}to{opacity:0;}
+}
+@keyframes l_loader_shining_inner{
+    from{left:0;opacity:0;transform:scale(0);}
+    50%{opacity:1;transform:scale(1);}
+    to{left:100%;opacity:0;transform:scale(0);}
+}
+</style>
+<div id="loader">
+    <div id="loader_left"></div>
+    <div id="loader_right"></div>
+    <div id="loader_content">载入中...</div>
+    <div id="loader_shining">
+        <div id="loader_shining_inner"></div>
+    </div>
+    <div id="loader_content2">Loading...</div>
+</div>
+<div class="container" id="demo">
+        <div class="metro" id="left">
+            <div class="metro-sections">
+                <div class="metro-section" id="section1">
+                    <a data-next="#section2" data-prior="#section1" href="index.html#" class="next-section"></a>
+                    <div class="tile tile-double tile-double-vertical bg-color-white ">
+						 <div style="margin-left:38px;margin-top:10px">
+                            <img src="www/img/11.jpg"  style="width: 300px;height: 300px;margin-top: -10px;margin-left: -30px;">
+                        </div>
+                        <span class="tile-label">我</span>
+					</div>		
+                    <div class="tile tile-double-vertical bg-color-yellow tile-multi-content" onclick="location.href='http://zeblog.duapp.com/resume'">
+                        <div class="tile-content-main" style="height:310px" >
+						<div class="tile-icon-large">
+                            <img src="www/img/Personal.png" style="width: 120px;height: 120px;margin-top: -10px;">
+                        </div>
+                        <span class="tile-label">简历  &nbsp;&nbsp;&nbsp;&nbsp;</span>
+						</div>
+		               <div class="tile-content-sub " style="background-color: rgb(255, 69, 0);">
+                             湖南大学，土木工程系学生
+                       </div>
+                    </div>
+                    <div class="tile bg-color-purple" onclick="location.href='http://weibo.com/zhouzijian1236'">
+                        <div class="tile-icon-large">
+                            <img src="www/img/weibo.png">
+                        </div>
+                        <span class="tile-label">微博</span>
+                    </div>
+                    <div class="tile bg-color-pink" onclick="location.href='https://github.com/jiange1236/'">
+                        <div class="tile-icon-large">
+                            <img src="www/img/github.png">
+                        </div>
+                        <span class="tile-label">Github</span>
+                    </div>
+                    <div class="tile tile-double tile-multi-content" onclick="location.href='http://blog.sina.com.cn/zhouzijianblog'">         
+                        <div class="tile-icon-large">
+                            <img src="www/img/sina.png" style="width: 120px;height: 120px;margin-top: 0px;">
+                        </div>
+                        <span class="tile-label">新浪博客</span>
+                        <span class="tile-counter"></span>
+                        
+                    </div>
+					<div style="float:left;">
+                    <div class="tile bg-color-orange tile-multi-content" onclick="location.href='mailto:183465355@qq.com'">
+                        <div class="tile-icon-large">
+                            <img src="www/img/mail-128.png" alt="183465355[at]qq.com">
+                        </div>
+                        <span class="tile-label">QMail</span>
+                        <span class="tile-counter">10</span>
+                    </div style="width:1000px;">
+                    <div class="tile tile-double bg-color-green" onclick="location.href='https://trello.com/b/8JETvrWV'">
+                        <div class="tile-icon-large">
+                            <img src="www/img/Calendar.png">
+                        </div>
+                        <span class="tile-label">Calendar&Trello</span>
+                        <span class="tile-counter">ZZJ</span>
+                    </div>
+                    <div class="tile tile-double" onclick="location.href='http://zeblog.duapp.com/blog'">
+                        <div class="" style="margin-top: 0px; " >
+                            <div style="padding:10px 10px 10px 10px;">
+                                <img href="http://zeblog.duapp.com/blog" src="www/img/Wordpressalt.png" style="height: 96px; margin-right: 20px" class="place-left">
+                                <div style="margin-left: 115px; margin-top: 10px">
+									<p style="font-size: 36px; margin-top: 0px; " onclick="location.href='http://zeblog.duapp.com/blog'">WP博客</p></a>
+                                    <p style="font-size: 18px; margin-top: 0px;">享受快乐</p>
+                                    <p style="font-size: 12px; margin-top: 5px">技术，分享，我的五彩生活</p>
+                                </div>
+                            </div>
+                            <span class="tile-label" style="font-color:black;"><a href="http://zeblog.duapp.com/blog" alt="点此进入">Wordpress博客</a></span>
+                        </div>
+                        <div class="tile-content-sub bg-color-blueDark" style="opacity: 0.3;filter: alpha(opacity=30); text-align: right;margin-top:5px;">
+BAE
+                        </div>
+                    </div>
+                    </div>
+                </div>
+			    <div id="down-icon"><p class="body-text">下页..</p><img width="55px" src="www/img/Down.png"/></div>
+         </div>
+     </div>
+    <div id="right">
+        <div class="metro" id="left">
+         <div class="metro-sections">
+             <div class="metro-section" id="section1">
+				 <div class="tile bg-color-orange" onclick="location.href='http://zeblog.duapp.com/chrome'">
+                        <div class="tile-icon-large">
+                            <img src="www/img/GoogleChrome.png" />
+                        </div>
+                	<span class="tile-label">Google Chrome</span>
+                 </div>
+                <div class="tile bg-color-yellow" onclick="location.href='http://zeblog.duapp.com/ads'">
+                    <div class="tile-icon-large">
+                        <img src="www/img/adblock-plus.png" />
+                    </div>
+            	<span class="tile-label">Anti Ads</span>
+                </div>
+
+                <div class="tile bg-color-darken" onclick="location.href='https://code.google.com/p/smartladder'">
+                    <div class="tile-icon-large">
+                        <img src="www/img/dxtl.png" />
+                    </div>
+            	<span class="tile-label">自由的网络</span>
+                </div>
+                <div class="tile bg-color-blue" onclick="location.href='http://zeblog.duapp.com/tv'">
+                    <!--div class="tile-icon-large">
+                        <h1 style="color: #fff !important; margin-top: 10px">微博</h1>
+                    </div-->
+					<div class="tile-icon-large">
+                        <img src="www/img/tv.png" />
+                    </div>
+            	<span class="tile-label">电视直播 :)</span>
+                </div>
+			    <div class="tile bg-color-blueDark" onclick="location.href='http://www.hnu.edu.cn/'">
+                    <div class="tile-icon-large">
+                        <h1 style="color: #fff !important; margin-top: 20px">HNU</h1>
+                        
+                    </div>
+            	<span class="tile-label">湖南大学</span>
+                </div>
+                    <div class="tile tile-double " onclick="location.href='http://zeblog.duapp.com/more'">
+                        <!--img src="www/img/hzgdg.png" style="position: absolute; top: 0px; left: 0px; display: block; width: 310px; height: 155px; opacity: 1; z-index: 0; "-->
+                        <!--span class="tile-counter" style="color:#000">杭州GDG组委</span-->
+						<div class="tile-icon-large">
+                            <img src="www/img/more.png" style="width: 120px;height: 120px;margin-top: 0px;">
+                        </div>
+						<span class="tile-counter">更多</span>
+                    </div>
+
+                    <div class="tile bg-color-pink" onclick="location.href='https://www.facebook.com/zhouzijian'">
+                        <div class="tile-icon-large">
+                            <img src="www/img/Facebook.png" />
+                        </div>
+                	<span class="tile-label">Facebook</span>
+                    </div>
+                    <div class="tile bg-color-green" onclick="location.href='https://twitter.com/zhouzijian1236'">
+                        <div class="tile-icon-large">
+                            <img src="www/img/Twitter.png" />
+                        </div>
+                	<span class="tile-label">Twitter</span>
+                    </div>
+                    <div class="tile bg-color-yellow" onclick="location.href='http://zhihudaily.duapp.com'">
+                        <div class="tile-icon-large">
+                        <!--h1 style="color: #fff !important; margin-top: 10px">精弘</h1-->
+						    <img src="www/img/zhihu.png" />
+                        </div>
+                	<span class="tile-label">知乎日报</span>
+                    </div>
+                    <div class="tile bg-color-red">
+                        <div class="tile-icon-large">
+                            <img src="www/img/metro.png" />
+                        </div>
+                	<span class="tile-label">Metro Style</span>
+                    </div>
+                    <div class="tile bg-color-blue">
+                        <div class="tile-icon-large">
+                            <img src="www/img/desktop.png" />
+                        </div>
+                	<span class="tile-label">PV: <script src="http://count.2881.com/count/count.asp?id=35889&sx=1&ys=5" language="JavaScript" charset="gb2312"></script></span>
+                    </div>
+                    <div class="tile tile-triple bg-color-purple" onclick="location.href='http://zeblog.duapp.com/404.html'">
+                        <div class="tile-icon-large">
+                            <img src="www/img/photo.png" />
+                        </div>
+                        <span class="tile-label">Photo</span>
+                    </div> 
+                </div>
+			    <div id="up-icon"><p class="body-text">回到首页..</p><img width="55px" src="www/img/Up.png"/></div>
+			</div>
+		</div>
+    </div>
+    <footer class="metro footer">
+        <p class="pull-right"><a href="index.html#">Metro</a></p>
+        <p class="body-text">© 2013-∞ Zeblog Copyleft</p>
+        <p class="tertiary-info-secondary"></p>
+    </footer>
+</div>
+	<script type="text/javascript">
+            (function($) {
+              $(document).ready(function() {
+               
+                    $('#down-icon').click(function(){
+
+                       
+                        //return;
+                    $('#demo').animate({
+                                      'bottom': 1.3 *  $('#left').height()
+                                  },'slow'
+                              );
+                    });
+                    $('#up-icon').click(function(){
+                        $('#demo').animate({
+                                      'bottom': 0 *  $('#left').height()
+                                  },'slow'
+                              );
+                    });
+
+                });
+            })(jQuery);
+    </script>
+	  <div class="video">
+  <video controls="" autoplay="" loop="" preload="" name="media" poster="/file/you.png">
+    <source src="http://www.google.com.hk/logos/2013/debussy/clairdelune.mp3" type="audio/mp3">
+    <track src="/file/you.vtt" srclang="zh-cn" label="简体中文" kind="caption" mode="showing" default> 
+  </video>
+  </div>
+  <style>
+#loader{height:0;-webkit-animation:l_loader ease-in 2s;animation:l_loader ease-in 2s}
+#loader_left,#loader_right{-webkit-animation:l_loader_float ease-out 2s;animation:l_loader_float ease-out 2s}
+#loader_content,#loader_content2,#loader_shining{-webkit-animation:l_loader_content ease-in 1s;animation:l_loader_content ease-in 1s;opacity:0}
+</style>
+</body>
+</html>

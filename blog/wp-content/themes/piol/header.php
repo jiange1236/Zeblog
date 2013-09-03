@@ -57,7 +57,7 @@ $("#menu li:eq(4)").addClass("<?php echo $piol_navItem_5; ?>")
 <?php } ?>
 				<form method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
 					<div>
-						<input type="text" value="" name="s" id="s" />
+						<input type="text" value="" name="s" id="s" speech="" x-webkit-speech="" />
 						<input type="submit" id="searchsubmit" value="搜索" />
 					</div>
 				</form>

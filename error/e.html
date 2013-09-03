@@ -1,0 +1,36 @@
+<html><head>
+<title>Google 桌面通知</title>
+<meta name="generator" content="editplus">
+<meta name="author" content="">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+<body>
+图标：<input type="text" class="text">标题：<input type="text" class="text">内容：<input type="text" class="text">
+<button id="btn">显示桌面通知</button> 
+
+<script type="text/javascript">
+document.querySelector("#btn").addEventListener('click', notify, false);
+
+function notify() {
+	if (window.webkitNotifications) {
+		if (window.webkitNotifications.checkPermission() == 0) {
+			var notification_test = window.webkitNotifications.createNotification(document.getElementsByClassName("text")[0].value, document.getElementsByClassName("text")[1].value,document.getElementsByClassName("text")[2].value);
+			notification_test.display = function() {}
+			notification_test.onerror = function() {}
+			notification_test.onclose = function() {}
+			notification_test.onclick = function() {this.cancel();}
+			
+			notification_test.replaceId = 'Meteoric';
+
+			notification_test.show();
+		} else {
+			window.webkitNotifications.requestPermission(notify);
+		}
+	} 
+}
+</script>
+
+</body>
+</html>  

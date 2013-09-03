@@ -1,0 +1,53 @@
+<?php
+$src=$_SERVER['HTTP_USER_AGENT'];
+preg_match('/MSIE (.*); Windows/', $src, $res);
+if(count($res)!=0&&(int)$res[1]<10 )
+header("location:/error")
+?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="file/style.css" />
+<link rel="stylesheet" type="text/css" href="message/run.css" />
+<script type="text/javascript" src="message/run.js"></script>
+<script>
+  document.onreadystatechange =function (){
+  if(location.href.split("#")[1]=="huihuiv587")
+  {
+    
+    //document.getElementsByName("media")[0].poster="/file/huihui.png";
+    var vm=document.getElementsByName("media")[0];
+    vm.poster="/file/huihui.png";
+    vm.getElementsByTagName("source")[0].src="http://zeback.duapp.com/4210661576v2131189278.mp3";
+vm.getElementsByTagName("track")[0].src="/file/huihui.vtt";
+    vm.load();
+    //var vm=document.getElementsByClassName("video")[0];
+    //vm.innerHTML='<video controls="" autoplay="" loop="" preload="" name="media" poster="/file/huihui.png"><source src="/file/huihui.mp3" type="audio/mp3"><track src="/file/huihui.vtt" srclang="zh-cn" label="简体中文" kind="caption" default=""></track> </video>'
+  }
+  }
+  //window.onload=vvv();
+</script>
+<title>Zeblog</title>
+</head>
+<body>
+  <ul class="bokeh">
+    <li>Z</li>
+    <li>e</li>
+    <li>b</li>
+    <li>l</li>
+    <li>o</li>
+    <li>g</li>
+</ul>
+  <p class="til" align="center">zeblog站尚在施工中</p>
+  <a href="http://jibushengdan.tk/1.html" class="a_demo_two" onclick="run('进度：0.02%')">
+                            Click me!
+                        </a>
+  <div class="video">
+  <video controls="" autoplay="" loop="" preload="" name="media" poster="/file/you.png">
+    <source src="http://zeback.duapp.com/4210661576v2131189278.mp3" type="audio/mp3">
+    <track src="/file/you.vtt" srclang="zh-cn" label="简体中文" kind="caption" mode="showing" default> 
+  </video>
+  </div>
+</body>
+</html>

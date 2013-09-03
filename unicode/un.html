@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>UTF-8 转换工具</title>
+<meta name="keywords" content="UTF-8编码转换,在线UTF-8编码,utf8在线编码"/><meta name="description" content="UTF-8编码在线转工具可以帮助你把中文转换成UTF-8编码，同时也支持把UTF-8编码过的还原成中文。"/><link rel="icon" href="/Chinaz.ico" type="image/x-icon" />
+<link href="/template/default/styles/toolsite.css?ver=2011_11" rel="stylesheet" type="text/css" />
+<script src="/template/default/js/globals.js?ver=2011_10" type="text/javascript"></script>
+
+<link rel="Stylesheet" type="text/css" href="/template/default/styles/topbar.css" />
+<script language="JavaScript">
+if(self!=top){top.location=self.location;}
+</script>
+</head>
+<body>
+<div class="wrap">
+<!--top-->
+<script type="text/javascript">
+var chinazTopBarMenu = {
+create: function (target, menucontents) {
+if (!document.getElementById(menucontents)) {
+    return;
+}
+var contents_wrap = document.getElementById(menucontents);
+var contents = contents_wrap.innerHTML;
+target.className += " hover";
+var dropdownmenu_wrap = document.createElement("div");
+dropdownmenu_wrap.className = "dropdownmenu-wrap";
+var dropdownmenu = document.createElement("div");
+dropdownmenu.className = "dropdownmenu";
+dropdownmenu.style.width = "auto";
+var dropdownmenu_inner = document.createElement("div");
+dropdownmenu_inner.className = "dropdownmenu-inner";
+dropdownmenu_wrap.appendChild(dropdownmenu);
+dropdownmenu.appendChild(dropdownmenu_inner);
+dropdownmenu_inner.innerHTML = contents;
+if (target.getElementsByTagName("div").length == 0) {
+    target.appendChild(dropdownmenu_wrap);
+}
+},
+clear: function (target) {
+target.className = target.className.replace(" hover", "");
+}
+}
+</script>
+
+<div class="top">
+
+<!--sub menu-->
+<!--main-->
+<div class="main">
+<script type="text/javascript">
+    function ConvUtf(obj, btn) {
+        document.getElementById("result").value = obj.value.replace(/[^\u0000-\u00FF]/g, function ($0) { return escape($0).replace(/(%u)(\w{4})/gi, "&#x$2;") });
+    }
+    function ResChinese(obj, btn) {
+        document.getElementById("content").value = unescape(obj.value.replace(/&#x/g, '%u').replace(/;/g, ''));
+    }
+    function preview() {
+        var win = window.open();
+        win.document.open('text/html', 'replace');
+        win.document.writeln(content.value);
+        win.document.close();
+    }
+</script> 
+<form method="post" id="form1">
+<div class="box">
+      <div id="b_1">
+        <br />
+		<br />
+		<br />
+           <div class="box1">
+             <div align="center" style="color:#006AAD;font-size:16px;font-weight:bold;">UTF-8编码在线转换器</div> 
+               <div align="center" style="padding-top:10px;"> 
+                <textarea id="content" name="content" style="width:850px;height:150px;border:1px solid #c5e2f2;overflow:visible;" cols="20" rows="15">请将您要转换的汉文内容粘贴在这里。</textarea> 
+                </div> 
+                <div style="margin-left:240px;padding:2px 0px 0px 0px;"> 
+                <input class="but2" id="conv" type="button" style="width:150px;" value="中文 转换 UTF-8 ↓" onclick="ConvUtf(content,this);"/> 
+                <input class="but2" id="res" type="button" style="width:150px;" value="UTF-8 还原 中文 ↑" onclick="ResChinese(result,this);" /> 
+               </div> 
+               <div align="center"> 
+                <textarea id="result" name="result" style="width:850px;height:150px;border:1px solid #c5e2f2;overflow:visible;" rows="15"></textarea> 
+              </div> 
+               <div style="margin-left:240px;padding:2px 0px 0px 0px;"> 
+               <input class="but2" id="pre" type="button" value="预览转换代码" onclick="preview();" /> 
+               </div>    
+           </div>
+   </div>
+   </div>
+   <script type="text/javascript">
+       getid('content').focus();
+       getid('content').select();
+    </script>
+</form>
+    <div class="box1">
+			<br />		<br />
+    <span  class="info2" style=" font-size: 14px; line-height: 24px; text-align: left;white-space:normal; width:860px;overflow:hidden;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UTF-8编码在线转工具可以帮助你把中文转换成UTF-8编码，同时也支持把UTF-8编码过的还原成中文。
+    </span>
+    </div>
+    </div>
+<div style=" height:5px;"></div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div style=" height:5px;"></div>
+<script type="text/javascript">Init();</script>
+<script type="text/javascript" src="http://images.chinaz.com/tool/topright.js" charset="utf-8" language="JavaScript"></script>
+<script type="text/javascript" src="http://my.chinaz.com/_topbar.aspx?proxy=/httpproxy.aspx" charset="utf-8"></script>
+</body>
+</html>

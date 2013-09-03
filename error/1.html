@@ -1,0 +1,115 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>鸡不生蛋</title>
+<style>
+*{margin:0;padding:0;outline: 0;border: 0;
+font-family: "浪漫雅圆" ,"微软雅黑"!important;
+}
+body{
+background-image: url("http://Boplink.tk/?shareid=399646&uk=3843347698.jpg");
+background-color: #079;
+}
+
+.top {
+padding-top: 40px;
+color: #fff;
+font-size: 30px;
+padding-left: 100px;
+padding-right: 100px;
+}
+.tl {
+display: inline;
+}
+.tr {
+display: inline;
+float: right;
+}
+
+
+
+ul{
+list-style-type:none
+}
+.liftul{
+height: 500px;
+width: 600px;
+margin-left: 50px;
+margin-top: 30px;
+}
+/*14*/
+.liftli{
+width: 254px;
+height: 120px;
+margin: 6px;
+background: -webkit-gradient(linear, 0 0, 50% 100%, from(rgba(0, 164, 247, 0.5)), to(rgba(0, 130, 194, 0.5)));
+background: linear-gradient(-45deg, rgba(0, 130, 194, 0.5),rgba(0, 164, 247, 0.5)) ;
+border: 1px solid rgba(0, 0, 0, 0.5);
+display: inline-table;
+}
+.liftli:hover {
+border:1px solid rgba(0, 103, 214, 0.5);
+}
+.liftli:nth-child(2n){
+background: -webkit-gradient(linear, 0 0, 50% 100%, from(rgba(250, 250, 250, 0.5)), to(rgba(204, 204, 204, 0.5)));
+background: linear-gradient(-45deg, rgba(204, 204, 204, 0.5),rgba(250, 250, 250, 0.5)) ;
+}
+.liftli:nth-child(-n+2),.liftli:nth-child(4),.liftli:nth-child(5),.liftli:nth-child(n+8){
+width: 120px;
+}
+.time{
+position: fixed!important;
+z-index: 99999;
+width: 240px;
+right: 20px;
+top: 70px;
+}
+.timt{
+color: #fff;
+font-size: 50px;
+}
+.timd{
+color: #333;
+text-align: right;
+font-size: 25px;
+}
+</style>
+</head>
+<body>
+<div class="top">
+	<div class="tl">MENU</div><div class="tr">JBSD.by huhu</div>
+</div>
+<ul class="liftul">
+	<li class="liftli">a</li><li class="liftli">b</li><li class="liftli">c</li><li class="liftli">d</li><li class="liftli">e</li><li class="liftli">f</li><li class="liftli">g</li><li class="liftli">h</li><li class="liftli">i</li>
+</ul>
+<div class="time"><span id=localtime></span>
+<script type="text/javascript">
+function showLocale(objD)
+{
+	var str,colorhead,colorfoot;
+	var m=new Array("January","February","March","April","May","June","July","August","September","October","November","December"); 
+	var w=new Array("Sunday","Monday","Tuseday","Wednesday","Thursday","Friday","Saturday"); 
+	var MM = objD.getMonth();
+	var dd = objD.getDate();
+	if(dd<10) dd = '0' + dd;
+	var hh = objD.getHours();
+	if(hh<10) hh = '0' + hh;
+	var mm = objD.getMinutes();
+	if(mm<10) mm = '0' + mm;
+	var ss = objD.getSeconds();
+	if(ss<10) ss = '0' + ss;
+	var ww = objD.getDay();
+	str = "<p class=\"timt\">" + " " + hh + ":" + mm + ":" + ss + " </p><p class=\"timd\"> " + w[ww] +", " + m[MM] + " " + dd + "</p>";
+	return(str);
+}
+function tick()
+{
+	var today;
+	today = new Date();
+	document.getElementById("localtime").innerHTML = showLocale(today);
+	window.setTimeout("tick()", 1000);
+}
+tick();
+</script></div>
+</body>
+</html>
